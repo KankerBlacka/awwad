@@ -1,6 +1,5 @@
 #include "Includes.h"
-
-#include <DobbyHook/dobby.h>
+#include "dobby.h"
 
 namespace Tools {
     void Hook(void *target, void *replace, void **backup);

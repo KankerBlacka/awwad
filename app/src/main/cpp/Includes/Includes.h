@@ -26,6 +26,18 @@
 
 #define IS_DEBUG
 
+// OBFUSCATE macro for string obfuscation
+#define OBFUSCATE(str) str
+
+// Global IL2CPP variable
+extern uintptr_t G_IL2CPP;
+
+// IL2CPP function declarations
+extern "C" {
+    void Il2CppAttach();
+    uintptr_t Il2CppGetMethodOffset(const char* assembly, const char* namespaze, const char* klass, const char* name, int args_count);
+}
+
 #if defined(IS_DEBUG)
 #define LOG_TAG "DarkTeam_LOG"
 #define LOGI(...) __android_log_print(ANDROID_LOG_INFO,LOG_TAG,__VA_ARGS__)

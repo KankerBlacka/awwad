@@ -188,7 +188,8 @@ void SetupImGui() {
     icons_config.OversampleV = 2.5;
 
     io.Fonts->AddFontFromMemoryTTF(const_cast<std::uint8_t*>(Custom), sizeof(Custom), 32.0f, &CustomFont);
-    io.Fonts->AddFontFromMemoryCompressedTTF(font_awesome_data, font_awesome_size, 32.0f, &icons_config, icons_ranges);
+    // Font Awesome icons disabled for now - add font_awesome_data if needed
+    // io.Fonts->AddFontFromMemoryCompressedTTF(font_awesome_data, font_awesome_size, 32.0f, &icons_config, icons_ranges);
     
     ImFontConfig font_cfg;
     font_cfg.SizePixels = 32.0f;

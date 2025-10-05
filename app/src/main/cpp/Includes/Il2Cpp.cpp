@@ -32,7 +32,11 @@ namespace {
     void *(*il2cpp_object_new)(void *klass);
 }
 // =========================================================================== //
-void Il2CppAttach(const char *name) {
+// Global IL2CPP variable
+uintptr_t G_IL2CPP = 0;
+
+void Il2CppAttach() {
+    const char *name = "libil2cpp.so";
     void *handle = dlopen_ex(name, 0);
     while (!handle) {
         handle = dlopen_ex(name, 0);
